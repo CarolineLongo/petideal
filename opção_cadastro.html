@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&family=Roboto:ital,wght@1,300;1,500&display=swap"
+    rel="stylesheet">
+  <title>Pet Ideal</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://images2.imgbox.com/84/07/x1sm9Zpj_o.jpeg" alt="logo" width="120" height="70"
+          class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Instituição</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="quemsomos.html">Quem Somos</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="motivação.html">Nossa Motivação</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="publicoalvo.html">Público-Alvo</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="meupet.html">Quero Conhecer Meu Pet</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="serparceiro.html">Quero Ser Um Parceiro do Pet Ideal</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.adotepetz.com.br/ongs-parceiras" target="_blank">Ong's</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="card.html">Quero Adotar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faleconosco.html">Fale Conosco</a>
+          </li>
+        </ul>
+
+        <div>
+          <!-- Botão para acionar o modal -->
+          <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#logusuarioModal"></button> <a href="login.html">Entre</a>
+            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+              data-bs-target="#logusuarioModal"></button> <a href="cadastro.php">Cadastre-se</a>
+            </button>
+          <a href="login.php">Entre ou Cadastre-se</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Parabéns pela iniciativa de se cadastrar!</h1>
+
+     <div class="imagem">
+      <img src="https://th.bing.com/th/id/R.3e8e83f0f0239b748d54060b833c9546?rik=jQFzcl4tWFVOdw&riu=http%3a%2f%2fstatic1.shop033.com%2fresources%2f18%2f160536%2fcropped%2f80%2f86941824_400x400.jpg&ehk=%2bIDo2XYb%2bzh8HO85PeM2TSbKuKQtXkcPgKpzIlDu6Jc%3d&risl=&pid=ImgRaw&r=0" alt="Pet feliz na praia" class="img-fluid">
+    </div><br>
+    <p>Antes disso, responda: você quer se cadastrar como cliente ou parceiro?</p>
+    <button class="" onclick="redirecionar('cliente')">Cliente</button>
+    <button onclick="redirecionar('parceiro')">Parceiro</button>
+  </div>
+
+  <footer>
+    <div class="footer-icon">
+      <img src="https://images2.imgbox.com/84/07/x1sm9Zpj_o.jpeg" alt="Ícone do site" width="120" height="70"
+        position="fixed">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; Todos os direitos reservados.</p>
+          <p>Avenida Almirante Heitor Doyle Maia, 302 - RJ, Rio de Janeiro - 2279302</p>
+          <p>Telefone: (12) 3456-7890 | Email: pet.ideal@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-wDmjT+pKa5UTgUSYO2OH2l5nksWzIqfR3frwOAH9fnWmSgm9xj5ltA3JmCQL0ZDD" crossorigin="anonymous"></script>
+
+  <script>
+    function redirecionar(opcao) {
+      if (opcao === 'cliente') {
+        window.location.href = 'formulario_cliente.html';
+      } else if (opcao === 'parceiro') {
+        window.location.href = 'formulario_parceiro.html';
+      }
+    }
+  </script>
+</body>
+
+</html>

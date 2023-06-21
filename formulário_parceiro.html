@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&family=Roboto:ital,wght@1,300;1,500&display=swap"
+    rel="stylesheet">
+  <title>Pet Ideal</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://images2.imgbox.com/84/07/x1sm9Zpj_o.jpeg" alt="logo" width="120" height="70"
+          class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">
+              <button type="button" class="btn btn-outline-warning" 
+             data-bs-toggle="modal">Início
+  </button>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+              aria-expanded="false">              
+              <button type="button" class="btn btn-outline-warning" 
+             data-bs-toggle="modal">Instituição
+  </button>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="quemsomos.html">Quem Somos</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="motivação.html">Nossa Motivação</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="publicoalvo.html">Público-Alvo</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="meupet.html">Quero Conhecer Meu Pet</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="serparceiro.html">Quero Ser Um Parceiro do Pet Ideal</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.adotepetz.com.br/ongs-parceiras" target="_blank"> 
+          <button type="button" class="btn btn-outline-warning" 
+             data-bs-toggle="modal">Ong's
+  </button>
+            </a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="card.html">
+              <button type="button" class="btn btn-outline-warning" 
+             data-bs-toggle="modal">Quero Adotar
+  </button>
+            </a>
+          </li>
+           <li class="nav-item">
+           <a class="nav-link" href="testefaleconosco.html">
+  <button type="button" class="btn btn-outline-warning" 
+             data-bs-toggle="modal">Fale Conosco
+  </button>
+           </a>
+           </li>
+             </ul>
+
+        <div>
+          <!-- Botão para acionar o modal -->
+          <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#logusuarioModal"></button> <a href="login.html">Entre</a>
+            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+              data-bs-target="#logusuarioModal"></button> <a href="cadastro.php">Cadastre-se</a>
+            </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <br><br>
+  <div class="container">
+    <div class="imagem">
+      <img src="https://i.pinimg.com/originals/ed/63/f6/ed63f65548533665f908395cafc763e6.jpg" alt="Pet inteligente" class="img-fluid">
+    </div>
+      <div class="text-center">
+      <div id="pergunta1Div"><br>
+        <!-- Pergunta 1 -->
+    <h2>O canil possui licença e registro legal para a criação e venda de cães?</h2><br>
+      </div>
+        <input type="radio" id="pergunta1_sim" name="pergunta1" value="Sim" required>
+    <label for="pergunta1_sim">Sim</label><br>
+    <input type="radio" id="pergunta1_nao" name="pergunta1" value="Não" required>
+    <label for="pergunta1_nao">Não</label><br><br>
+    <button onclick="proximaPergunta('pergunta1Div', 'pergunta2Div')">Próxima</button>
+  </div>
+    </div><br>
+  <!-- Pergunta 2 --> 
+     <div class="text-center">
+     <div id="pergunta2Div" style="display: none;">
+    <h2>O canil possui um ambiente adequado e seguro para os cães?</h2><br>
+    <input type="radio" id="pergunta2_sim" name="pergunta2" value="Sim" required>
+    <label for="pergunta2_sim">Sim</label><br>
+    <input type="radio" id="pergunta2_nao" name="pergunta2" value="Não" required>
+    <label for="pergunta2_nao">Não</label><br><br>
+    <button onclick="proximaPergunta('pergunta2Div', 'pergunta3Div')">Próxima</button><br>
+  </div>
+  </div><br>
+  <!-- Pergunta 3 --> 
+  <div class="text-center">
+    <div id="pergunta3Div" style="display: none;">
+    <h2>O canil possui cuidados de saúde adequados para os cães, incluindo vacinação e acompanhamento veterinário?</h2><br>
+    <input type="radio" id="pergunta3_sim" name="pergunta3" value="Sim" required>
+    <label for="pergunta3_sim">Sim</label><br>
+    <input type="radio" id="pergunta3_nao" name="pergunta3" value="Não" required>
+    <label for="pergunta3_nao">Não</label><br><br>
+    <button onclick="proximaPergunta('pergunta3Div', 'pergunta4Div')">Próxima</button><br>
+  </div
+  </div><br>
+  <!-- Pergunta 4 -->
+<div class="text-center">
+    <div id="pergunta4Div" style="display: none;">
+    <h2>O canil possui um programa de socialização e treinamento para os cães?</h2><br>
+    <input type="radio" id="pergunta4_sim" name="pergunta4" value="Sim" required>
+    <label for="pergunta4_sim">Sim</label><br>
+    <input type="radio" id="pergunta4_nao" name="pergunta4" value="Não"required>
+    <label for="pergunta4_nao">Não</label><br><br>
+    <button onclick="proximaPergunta('pergunta4Div', 'pergunta5Div')">Próxima</button<br>
+  </div>
+  </div><br>
+  <!-- Pergunta 5 --> 
+  <div class="text-center">
+    <div id="pergunta5Div" style="display: none;">
+    <h2>O canil possui um programa de cuidado pós-adoção, incluindo suporte e orientação aos adotantes?</h2><br>
+    <input type="radio" id="pergunta5_sim" name="pergunta5" value="Sim" required>
+    <label for="pergunta5_sim">Sim</label><br>
+    <input type="radio" id="pergunta5_nao" name="pergunta5" value="Não" required>
+    <label for="pergunta5_nao">Não</label><br><br>
+    <button onclick="proximaPergunta('pergunta5Div', 'pergunta6Div')">Próxima</button><br>
+  </div>
+ </div><br>
+  <!-- Pergunta 6 --> 
+  <div class="text-center">
+    <div id="pergunta6Div" style="display: none;">
+    <h2>O canil possui um processo de triagem e entrevista rigoroso para os potenciais adotantes?</h2><br>
+    <input type="radio" id="pergunta6_sim" name="pergunta6" value="Sim" required>
+    <label for="pergunta6_sim">Sim</label><br>
+    <input type="radio" id="pergunta6_nao" name="pergunta6" value="Não" required>
+    <label for="pergunta6_nao">Não</label><br><br>
+    <button onclick="proximaPergunta('pergunta6Div', 'pergunta7Div')">Próxima</button><br>
+  </div
+</div><br>
+  <!-- Pergunta 7 -->
+  <div class="text-center">
+    <div id="pergunta7Div" style="display: none;">
+    <h2>O canil está disposto a assinar um contrato de parceria, seguindo as diretrizes do site?</h2><br>
+    <input type="radio" id="pergunta7_sim" name="pergunta7" value="Sim" required>
+    <label for="pergunta7_sim">Sim</label><br>
+    <input type="radio" id="pergunta7_nao" name="pergunta7" value="Não" required>
+    <label for="pergunta7_nao">Não</label><br><br>
+    <button onclick="verificarRespostas()">Verificar Respostas</button<br>
+    </div>
+  </div><br>
+</div>
+  <!-- Resultado -->
+  <div id="resultado" style="display: none;">
+    <h2>Resultado da Avaliação:</h2><br>
+    <p id="resultadoTexto"></p>
+    <button onclick="redirecionarPaginaInicial()">Voltar para a Página Inicial</button><br>
+  </div>
+  <script>
+    function proximaPergunta(perguntaAtual, proximaPergunta) {
+      document.getElementById(perguntaAtual).style.display = 'none';
+      document.getElementById(proximaPergunta).style.display = 'block';
+    }
+
+    function verificarRespostas() {
+      var resultado = '';
+
+      // Verificar respostas
+      var pergunta1 = document.querySelector('input[name="pergunta1"]:checked');
+      var pergunta2 = document.querySelector('input[name="pergunta2"]:checked');
+      var pergunta3 = document.querySelector('input[name="pergunta3"]:checked');
+      var pergunta4 = document.querySelector('input[name="pergunta4"]:checked');
+      var pergunta5 = document.querySelector('input[name="pergunta5"]:checked');
+      var pergunta6 = document.querySelector('input[name="pergunta6"]:checked');
+      var pergunta7 = document.querySelector('input[name="pergunta7"]:checked');
+
+      if (pergunta1 && pergunta2 && pergunta3 && pergunta4 && pergunta5 && pergunta6 && pergunta7) {
+        if (
+          pergunta1.value === 'Sim' &&
+          pergunta2.value === 'Sim' &&
+          pergunta3.value === 'Sim' &&
+          pergunta4.value === 'Sim' &&
+          pergunta5.value === 'Sim' &&
+          pergunta6.value === 'Sim' &&
+          pergunta7.value === 'Sim'
+        ) {
+          resultado = 'O canil atende aos critérios e é elegível para se tornar parceiro do Pet Ideal.';
+        } else {
+          resultado = 'O canil não atende a um ou mais critérios para se tornar parceiro do Pet Ideal.';
+        }
+      } else {
+        resultado = 'Por favor, responda todas as perguntas antes de verificar o resultado.';
+      }
+
+      document.getElementById('resultadoTexto').textContent = resultado;
+      document.getElementById('resultado').style.display = 'block';
+    }
+
+    function redirecionarPaginaInicial() {
+      location.reload();
+    }
+  </script>
+  <footer>
+  <div class="footer-icon">
+
+    <img src=" https://images2.imgbox.com/84/07/x1sm9Zpj_o.jpeg " alt="Ícone do site" width="120" height="70"
+      position="fixed">
+
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; Todos os direitos reservados.</p>
+        <p>Avenida Almirante Heitor Doyle Maia, 302 - RJ, Rio de Janeiro -2279302 </p>
+        <p>Telefone: (12) 3456-7890 | Email: pet.ideal@gmail.com</p>
+        </div>
+    </div>
+    </div>
+  </footer>
+</body>
+</html>
